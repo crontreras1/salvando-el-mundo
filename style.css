@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 .background__container {
     background-image: url(./assets/background-body.jpg);
@@ -21,9 +23,16 @@
 }
 
 .header img {
-    width: 300px;
-    height: 60px;
+    width: 167px;
+    height: 27px;
      margin: 0 10px;
+}
+
+.titulo {
+    color: #e2e2e2;
+    font-size: 25px;
+    margin: 0px 20px;
+    letter-spacing: 6px;
 }
 
 .nav-container li {
@@ -50,7 +59,6 @@
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .introduccion__h2 {
@@ -74,7 +82,6 @@
     width: 800px;
     height: 400px;
     background-color: #e2e2e2;
-    /* opacity: 0.5; */
     margin: 20px;
     border-radius: 20px;
     box-shadow: 10px 10px 5px 0px rgb(0 0 0 / 75%);
@@ -117,16 +124,12 @@
     animation: arrastrar 220s linear infinite;
 }
 
-.arrastar p {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
 @keyframes arrastrar {
    from {
        bottom: 408px;
    }
    to {
-       top: -1150px;
+       top: -1550px;
    }
 }
 
@@ -216,16 +219,16 @@
 
 .carrusel__item--escena2 {
     position: relative;
-    background-image: url(./assets/fonso/escenario3.png);
+    background-image: url(./assets/fonso/escenario2.png);
     overflow: hidden;
 }
 
 .nube__escena2 {
     position: absolute;    
-    z-index: 2;
+    z-index: 1;
     top: 30px;
     left: -130px;
-    animation: nube 120s linear infinite;
+    animation: nube 60s linear infinite;
 }
 
 @keyframes nube {
@@ -239,7 +242,7 @@
 
 .nautilus__escena2 img {
     position: absolute;
-    z-index: 4;
+    z-index: 3;
     right: 155px;
     bottom: 40px;
     animation: barco 5s linear infinite;
@@ -258,19 +261,17 @@
 }
 
 .texto__escena2 {
+    background-color: #e6d8b2;
+    margin: 30px;
+    padding: 10px;
+    z-index: 2;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 6px 5px 0px rgba(168,158,158,0.75);
+    -webkit-box-shadow: 5px 6px 5px 0px rgba(168,158,158,0.75);
+    -moz-box-shadow: 5px 6px 5px 0px rgba(168,158,158,0.75);
     position: absolute;
-    bottom: 188px;
-    animation: texto2 30s linear infinite;
-    
-}
-
-@keyframes texto2 {
-    from {
-        right: 830px;
-    }
-    to {
-        right: 430px;
-    }
+    left: 3px;
 }
 
 .fonso__escena2 {
@@ -300,6 +301,78 @@
 .carrusel__item--escena3 {
     position: relative;
     overflow: hidden;
+    background-image: url(./assets/fonso/escenario3.png);
+}
+
+.nube__escena3 {
+    position: absolute;    
+    z-index: 2;
+    top: 30px;
+    left: -130px;
+    animation: nube1 3s linear infinite;
+}
+
+@keyframes nube1 {
+    from {
+        right: 130px;
+    }
+    to {
+        left: 830px;
+    }
+}
+
+.nube1__escena3 {
+    position: absolute;    
+    z-index: 1;
+    top: 45px;
+    left: -130px;
+    animation: nube2 5s linear infinite;
+}
+
+@keyframes nube2 {
+    from {
+        right: 130px;
+    }
+    to {
+        left: 830px;
+    }
+}
+
+.texto__escena3 {
+    background-color: #e6d8b2;
+    position: absolute;
+    right: 0px;
+    z-index: 3;
+    margin: 30px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 6px 5px 0px rgba(168,158,158,0.75);
+    -webkit-box-shadow: 5px 6px 5px 0px rgba(168,158,158,0.75);
+    -moz-box-shadow: 5px 6px 5px 0px rgba(168,158,158,0.75);
+}
+
+.nautilus__escena3 img {
+    position: absolute;
+    top: 154px;
+    left: -400px;
+    animation: ola 10s linear infinite;
+    transform: rotate(-12deg);
+}
+
+@keyframes ola {
+    0% {
+        top: 80px;
+        left: -400px;
+    }
+    50% {
+        top: 124px;
+        left: 400px;
+    }
+    100% {
+        top: 80px;
+        left: 810px;
+    }
 }
 
 .ocean { 
@@ -345,56 +418,54 @@
     }
   }
 
-  .carrusel__item--escena4 {
-      background-image: url(./assets/fonso/escenario4.png);
-      position: relative;
-      overflow: hidden;
-  }
+.carrusel__item--escena4 {
+    background-image: url(./assets/fonso/escenario4.png);
+    position: relative;
+    overflow: hidden;
+}
 
-  .texto__escena4 {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      background-color: #e6d8b2;
-      position: absolute;
-      margin: 30px;
-      padding: 10px;
-      text-align: center;
-      border-radius: 10px;
-      box-shadow: 5px 6px 5px 0px rgba(168,158,158,0.75);
-      -webkit-box-shadow: 5px 6px 5px 0px rgba(168,158,158,0.75);
-      -moz-box-shadow: 5px 6px 5px 0px rgba(168,158,158,0.75);
-  }
+.texto__escena4 {
+    background-color: #e6d8b2;
+    position: absolute;
+    margin: 30px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 6px 5px 0px rgba(168,158,158,0.75);
+    -webkit-box-shadow: 5px 6px 5px 0px rgba(168,158,158,0.75);
+    -moz-box-shadow: 5px 6px 5px 0px rgba(168,158,158,0.75);
+}
 
-  .nautilus__escena4 {
-      position: absolute;
-      bottom: 10px;
-      left: -152px;
-      animation: barco4 60s linear infinite;
-  }
+.nautilus__escena4 {
+    position: absolute;
+    bottom: 10px;
+    left: -152px;
+    animation: barco4 60s linear infinite;
+}
 
-  @keyframes barco4 {
-      from {
-          left: -152px;
-      }
-      to {
-          left: 802px;
-      }
-  }
+@keyframes barco4 {
+    from {
+        left: -152px;
+    }
+    to {
+        left: 802px;
+    }
+}
 
-  .ola__escena4 {
-      width: 100%;
-      height: 15px;
-      background-color: #021317;
-      position: absolute;
-      bottom: 0px;
-  }
+.ola__escena4 {
+    width: 100%;
+    height: 15px;
+    background-color: #021317;
+    position: absolute;
+    bottom: 0px;
+}
 
-  .carrusel__item--escena5 {
-      background-image: url(./assets/fonso/escenario5.png);
-      position: relative;
-  }
+.carrusel__item--escena5 {
+    background-image: url(./assets/fonso/escenario5.png);
+    position: relative;
+}
 
-  .texto__escena5 {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.texto__escena5 {
     background-color: #e6d8b2;
     margin: 30px;
     padding: 10px;
@@ -405,22 +476,29 @@
     -moz-box-shadow: 5px 6px 5px 0px rgba(168,158,158,0.75);
     position: absolute;
     right: 3px;
-  }
+}
 
-  .insignia {
-    font-family: 'Open Sans', sans-serif;
+.insignia {
     font-size: 25px;
     margin: 25px;
-    
-  }
+}
 
-  .nautilus__escena5 {
-      position: absolute;
-      animation: barco5 3s linear infinite;
-      bottom: 20px;
-  }
+.insignia:hover {
+    transition: transform 1s;
+    transform: scale(1.2);
+}
 
-  @keyframes barco5 {
+.recomendacion {
+    font-size: 16px;
+}
+
+.nautilus__escena5 {
+    position: absolute;
+    animation: barco5 3s linear infinite;
+    bottom: 20px;
+}
+
+@keyframes barco5 {
     0% {
         bottom: 20px;
     }
@@ -430,21 +508,27 @@
     100% {
         bottom: 20px;
     }
-  }
+}
 
-  .baston__escena5 {
-      position: absolute;
-      top: 102px;
-      left: 250px;
-  }
+.baston__escena5 {
+    position: absolute;
+    top: 125px;
+    left: 274px;
+}
+    
+.baston__escena5:hover {
+    transition-duration: 2s;
+    transform: rotate(-80deg);
+    transform-origin: 0% 0%;
+}
 
-  .ola__escena5 {
-      width: 100%;
-      height: 25px;
-      background-color: #4264b2;
-      position: absolute;
-      bottom: 0;
-  }
+.ola__escena5 {
+    width: 100%;
+    height: 25px;
+    background-color: #4264b2;
+    position: absolute;
+    bottom: 0;
+}
 
 .footer {
     background-color: #262626;
@@ -460,6 +544,6 @@
 }
 
 .footer a:hover {
-    color: #e2e2e2;
+    color: #ffc34d;
     font-size: 20px;
 }
